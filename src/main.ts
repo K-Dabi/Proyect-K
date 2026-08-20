@@ -10,6 +10,10 @@ class BootScene extends Phaser.Scene {
     super('boot');
   }
 
+  preload() {
+    this.load.image('dabi-reference', dabiReference);
+  }
+
   create() {
     this.cameras.main.setBackgroundColor('#12131b');
     this.add.text(80, 60, 'PROYECT K', {
@@ -25,7 +29,7 @@ class BootScene extends Phaser.Scene {
       color: '#aeb4c4',
     });
 
-    this.add.image(GAME_WIDTH / 2, 405, dabiReference)
+    this.add.image(GAME_WIDTH / 2, 405, 'dabi-reference')
       .setDisplaySize(360, 540);
   }
 }
